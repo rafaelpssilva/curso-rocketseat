@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheey" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
+    <title>Document</title>
+    <style>
+
+        .esconder {
+            display: none;
+        }
+
+        .aparecer {
+            display: block;
+        }
+
+        .red {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <button id="openModal">
+        Abrir janela
+    </button>
+    <div id="closeModal" class="esconder">
+        Tecle ESC para fechar
+    </div>
+
+    <script>
+
+        const body = document.querySelector('body')
+        const openModal = document.querySelector('#openModal')
+        const closeModal = document.querySelector('#closeModal')
+
+        openModal.addEventListener('click', esconder1)
+
+        function esconder1 () {
+            openModal.classList.add('esconder')
+            closeModal.classList.remove('esconder')
+        }
+
+        function mudarBg () {
+            body.classList.add('red')
+        }
+
+        body.onkeyup = function (event) {
+            if(event.key === "Escape") {
+                openModal.classList.remove('esconder')
+                closeModal.classList.add('esconder')
+            }
+        }
+
+
+    </script>
+
+</body>
+</html>

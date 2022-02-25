@@ -9,12 +9,8 @@
  * Para que seja impresso no terminal a saudação e o nome  da pessoa.
 */ 
 
+const myModule = require('./desafio-exports')
 
-const argv = process.argv
-for (let i in argv) {
-    // console.log(argv[i])
-    if (argv[i].includes('--')) {
-        console.log(argv[++i])
-    }
-}
+myModule('--name', '--lastName')
+
 

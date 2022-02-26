@@ -9,8 +9,8 @@
  * Para que seja impresso no terminal a saudação e o nome  da pessoa.
 */ 
 
-const myModule = require('./desafio-exports')
+const myModule = require('./flags')
 
-myModule('--name', '--lastName')
+myModule('--name', '--greeting')
 
 
